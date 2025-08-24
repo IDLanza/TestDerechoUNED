@@ -14,7 +14,7 @@ export function supabaseServer() {
           store.set({ name, value, ...options });
         },
         remove: (name, options) => {
-          store.set({ name, value: '', ...o });
+          store.set({ name, value: '', ...options }); // <-- aquí estaba el fallo
         },
       },
     }
